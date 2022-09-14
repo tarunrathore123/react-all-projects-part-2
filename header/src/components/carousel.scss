@@ -1,0 +1,52 @@
+.carousel {
+  z-index: 1;
+  overflow: hidden;
+}
+.inner {
+  display: flex;
+  //   white-space: nowrap;
+  //never use nowrap
+  transition: transform 0.3s;
+}
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  min-width: 100%;
+}
+.indicators {
+  position: absolute;
+  right: 20px;
+  bottom: 64px;
+  display: flex;
+  justify-content: center;
+  p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 30px 0 30px;
+  }
+  button {
+    margin: 5px;
+  }
+  button.active {
+    background-color: green;
+    color: #fff;
+  }
+}
+
+@media (max-width: 650px) {
+  .indicators {
+    position: relative;
+    inset: 0;
+    p {
+      color: black;
+    }
+  }
+  .leftContent {
+    background-image: url(../assets/mobilecarouselbackground.png);
+  }
+}
